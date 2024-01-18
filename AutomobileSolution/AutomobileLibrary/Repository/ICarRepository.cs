@@ -13,7 +13,7 @@ namespace AutomobileLibrary.Repository
     public interface ICarRepository
     {
         IEnumerable<Car> GetCars();
-        Car GetCarById(int carId);
+        Car GetCarByID(int carId);
         void InsertCar(Car car);
         void DeleteCar(int carId);
         void UpdateCar(Car car);

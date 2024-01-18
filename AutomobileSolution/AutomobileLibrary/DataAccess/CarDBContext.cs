@@ -5,22 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AutomobileLibrary.DataAccess
 {
     public class CarDBContext
     {
         //Initialize car list
-        private static List<Car> CarList = new List<Car>
-        {
-            new Car{ CarID=1, CarName="CRV", Manufacturer="Honda",
-                Price=30000, ReleaseYear=2021
-            },
-            new Car{ CarID=2, CarName="Ford Focus", Manufacturer="Ford",
-                Price=15000, ReleaseYear=2020
-            }
+        private static List<Car> CarList = new List<Car>() {
+            new Car{ CarID = 1, CarName = "CRV", Manufacturer = "Honda",
+                Price = 30000, ReleaseYear = 2021},
+            new Car{ CarID = 2, CarName = "Ford Focus", Manufacturer = "Ford",
+                Price = 15000, ReleaseYear = 2020}
+
         };
-        //---------------------------------------
-        //Using Singleton Pattern
+        // Using Singleton Pattern
         private static CarDBContext instance = null;
         private static readonly object instanceLock = new object();
         private CarDBContext() { }
@@ -38,18 +36,18 @@ namespace AutomobileLibrary.DataAccess
                 }
             }
         }
-        //------------------------------
+
         public List<Car> GetCarList => CarList;
-        //----------------
+        //------------------------------------
         public Car GetCarByID(int carID)
         {
-            //using LINQ to object
+            //using LINQ to Object
             Car car = CarList.SingleOrDefault(pro => pro.CarID == carID);
             return car;
         }
-        //--------------------
-        //ADD new a car
-        public void Addnew(Car car)
+
+        //Add new a car
+        public void AddNew(Car car)
         {
             Car pro = GetCarByID(car.CarID);
             if (pro == null)
@@ -61,7 +59,7 @@ namespace AutomobileLibrary.DataAccess
                 throw new Exception("Car is already exists.");
             }
         }
-        //Update a car
+
         public void Update(Car car)
         {
             Car c = GetCarByID(car.CarID);
@@ -70,13 +68,16 @@ namespace AutomobileLibrary.DataAccess
                 var index = CarList.IndexOf(c);
                 CarList[index] = car;
             }
-            else { throw new Exception("Car does not already exists."); }
+            else
+            {
+                throw new Exception("Car does not already exists");
+            }
         }
-        //----------------------
-        //Remove a car
-        public void Remove(int CarID)
+
+        //Romove a car
+        public void Remove(int CartID)
         {
-            Car p = GetCarByID(CarID);
+            Car p = GetCarByID(CartID);
             if (p != null)
             {
                 CarList.Remove(p);
@@ -86,7 +87,6 @@ namespace AutomobileLibrary.DataAccess
                 throw new Exception("Car does not already exists.");
             }
         }
-
 
     }
 }

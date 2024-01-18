@@ -7,22 +7,76 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutomobileLibrary.BussinessObject;
+using AutomobileLibrary.Repository;
+
 
 namespace AutomobileWinform
 {
-    public partial class Form1 : Form
+    public partial class frmCarDetails : Form
     {
-        public Form1()
+        public frmCarDetails()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        public ICarRepository CarRepository { get; set; }
+        public bool InsertOrUpdate { get; set; }
+        public Car CarInfo { get; set; }
+        //---------------------------------------------
+
+        private void lbPrice_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void frmCarDetails_Load(object sender, EventArgs e)
+        {
+            cboManufacturer.SelectedIndex = 0;
+            txtCarID.Enabled = !InsertOrUpdate;
+            if (InsertOrUpdate == true)
+            {
+                txtCarID.Text = CarInfo.CarID.ToString();
+                txtCarName.Text = CarInfo.CarName;
+                txtPirce.Text = CarInfo.Price.ToString();
+                txtReleaseYear.Text = CarInfo.ReleaseYear.ToString();
+                cboManufacturer.Text = CarInfo.Manufacturer.Trim();
+
+
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+
+        {
+            try
+            {
+                var car = new Car
+                {
+                    CarID = int.Parse(txtCarID.Text),
+                    CarName = txtCarName.Text,
+                    Manufacturer = cboManufacturer.Text,
+                    Price = decimal.Parse(txtPirce.Text),
+                    ReleaseYear = int.Parse(txtReleaseYear.Text)
+
+                };
+                if (InsertOrUpdate == false)
+                {
+                    CarRepository.InsertCar(car);
+                }
+                else{
+                    CarRepository.UpdateCar(car);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add a new car" : "Update a car");
+            }
+
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
         {
 
         }
