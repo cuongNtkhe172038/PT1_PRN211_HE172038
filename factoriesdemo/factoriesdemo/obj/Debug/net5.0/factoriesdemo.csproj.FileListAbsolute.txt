@@ -1,0 +1,16 @@
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\bin\Debug\net5.0\factoriesdemo.exe
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\bin\Debug\net5.0\factoriesdemo.deps.json
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\bin\Debug\net5.0\factoriesdemo.runtimeconfig.json
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\bin\Debug\net5.0\factoriesdemo.runtimeconfig.dev.json
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\bin\Debug\net5.0\factoriesdemo.dll
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\bin\Debug\net5.0\factoriesdemo.pdb
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.AssemblyInfoInputs.cache
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.AssemblyInfo.cs
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.csproj.CoreCompileInputs.cache
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.sourcelink.json
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.dll
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\refint\factoriesdemo.dll
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.pdb
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\factoriesdemo.genruntimeconfig.cache
+D:\prn211\PT1_PRN211_HE172038\factoriesdemo\factoriesdemo\obj\Debug\net5.0\ref\factoriesdemo.dll
